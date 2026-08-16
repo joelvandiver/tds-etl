@@ -1,0 +1,8 @@
+# Left (source) model: the shape of the raw extract. Data, not code.
+name: customer_raw
+fields:
+  - { name: first_name, type: string, required: true }
+  - { name: last_name, type: string, required: true }
+  - { name: dob, type: string }
+  - { name: balance, type: float }
+  - { name: status, type: string }

@@ -1,0 +1,8 @@
+# Right (target) model: the shape the warehouse expects. Data, not code.
+name: customer
+fields:
+  - { name: full_name, type: string, required: true }
+  - { name: birth_date, type: date }
+  - { name: balance_cents, type: integer }
+  - { name: is_active, type: boolean }
+  - { name: source_system, type: string, required: true }

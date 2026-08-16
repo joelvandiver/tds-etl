@@ -1,0 +1,7 @@
+# The worker spec: models, map, input, output. Paths are relative to this file.
+left_model: left.yaml
+right_model: right.yaml
+mapping: map.yaml
+input: { format: csv, path: input.csv }
+output: { format: json, path: ../out/customers.json }
+rejects: ../out/customers.rejects.json

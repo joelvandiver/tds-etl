@@ -1,0 +1,7 @@
+first_name,last_name,dob,balance,status
+"  Ada ",Lovelace,12/10/1815,1250.50,active
+Grace,Hopper,12/09/1906,99.95,  ACTIVE
+Alan,Turing,,10.00,inactive
+,Unknown,01/01/1970,10.00,active
+Edsger,Dijkstra,05/11/1930,not-a-number,active
+Barbara,Liskov,11/07/1939,50.25,pending

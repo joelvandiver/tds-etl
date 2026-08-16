@@ -1,0 +1,34 @@
+# The map between the left and right models. Each target field declares its
+# source field(s) and a transform chain — all data, interpreted by the engine.
+left: customer_raw
+right: customer
+fields:
+  - target: full_name
+    sources: [first_name, last_name]
+    transforms:
+      - trim
+      - concat: { separator: " " }
+
+  - target: birth_date
+    source: dob
+    transforms:
+      - parse_date: { format: "%m/%d/%Y" }
+
+  - target: balance_cents
+    source: balance
+    transforms:
+      - multiply: { by: 100 }
+      - round: {}
+      - cast: { to: integer }
+
+  - target: is_active
+    source: status
+    transforms:
+      - trim
+      - lowercase
+      - lookup:
+          table: { active: true, inactive: false }
+
+  - target: source_system
+    transforms:
+      - constant: { value: legacy_crm }

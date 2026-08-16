@@ -1,0 +1,19 @@
+[package]
+name = "tds-etl"
+version = "0.1.0"
+edition = "2021"
+description = "Prototype metadata-driven ETL worker: models and mappings are data, the engine is Rust."
+
+[[bin]]
+name = "etl"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+serde_yaml = "0.9"
+csv = "1"
+chrono = { version = "0.4", features = ["serde"] }
+indexmap = { version = "2", features = ["serde"] }
